@@ -1,0 +1,54 @@
+.migalha{
+    border-bottom: 5px dashed $color_destaque;
+    .titulo{
+        display: block;
+        background-image: url('../imagens/background-migalha.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 80px 0px;
+        margin-bottom: 0px;
+        margin-top: 0.6px;
+        h1{
+            font-size: 36px;
+            font-family: 'Montserrat Bold';
+        }
+        &:after{
+            display: none;
+        }
+    }
+    .caminho{
+        padding: 20px 0px;
+        ul{
+            display: inline-flex;
+            flex-wrap: wrap;
+            li{
+                font-size: 14px;
+                font-family: 'Montserrat Regular';
+                margin-left: 5px;
+                position: relative;
+                &:before{
+                    position: absolute;
+                    // content: '::';
+                    top: 0%;
+                    width: 5px;
+                    height: 1px;
+                    left: -10px;
+                    background-color: #fff;
+                }
+                &:first-child{
+                    margin-left: 0px;
+                    &:before{
+                        display: none;
+                    }
+                }
+            }
+            a{
+                transition: .30s;
+                &:hover{
+                    color: $color_destaque_hover;
+                }
+            }
+        }
+    }
+}
