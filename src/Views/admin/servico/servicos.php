@@ -7,7 +7,7 @@
         </div>
         <div class="topo">
             <div class="btn">
-                <a href="#" class="btn">
+                <a href="<?=URL_BASE?>admin/servicos-create" class="btn">
                     Cadastrar novo
                 </a>
             </div>
