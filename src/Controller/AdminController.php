@@ -33,8 +33,11 @@ final class AdminController
         ResponseInterface $response,
         $args
     ) {
+        $data['informacoes'] = array(
+            'menu_active' => 'servicos'
+        );
         $renderer = new PhpRenderer(DIRETORIO_TEMPLATES_ADMIN."/servico");
-        return $renderer->render($response, "servicos.php");
+        return $renderer->render($response, "servicos.php", $data);
     }
     public function servicos_create(
         ServerRequestInterface $request, 
