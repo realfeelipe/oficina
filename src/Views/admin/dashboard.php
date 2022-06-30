@@ -1,4 +1,4 @@
-<?=$this->fetch('commons/header.php')?>
+<?=$this->fetch('commons/header.php', $data)?>
 
 <section class="dashboard">
     <div class="container">

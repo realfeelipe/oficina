@@ -35,7 +35,7 @@
                 <img src="<?=URL_BASE?>resources/imagens/logo.png" alt="">
                 <hr>
                 <ul>
-                    <li>
+                    <li class="<?=($data['informacoes']['menu_active'] === 'dashboard') ? 'active' : ''?>">
                         <a href="<?=URL_BASE?>dashboard">
                             <i class="fas fa-chart-area"></i>Dashboard
                         </a>

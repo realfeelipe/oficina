@@ -21,8 +21,12 @@ final class AdminController
         ResponseInterface $response,
         $args
     ) {
+        $data['informacoes'] = array(
+            'menu_active' => 'dashboard'
+        );
+
         $renderer = new PhpRenderer(DIRETORIO_TEMPLATES_ADMIN);
-        return $renderer->render($response, "dashboard.php");
+        return $renderer->render($response, "dashboard.php", $data);
     }
     public function servicos(
         ServerRequestInterface $request, 
