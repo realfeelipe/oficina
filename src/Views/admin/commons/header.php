@@ -43,7 +43,7 @@
                     <li class="nome-categoria">
                         Conteúdo
                     </li>
-                    <li>
+                    <li class="<?=($data['informacoes']['menu_active'] === 'servicos') ? 'active' : ''?>">
                         <a href="<?=URL_BASE?>admin/servicos">
                             <i class="fas fa-wrench"></i>Serviços
                         </a>
