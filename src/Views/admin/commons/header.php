@@ -48,17 +48,17 @@
                             <i class="fas fa-wrench"></i>Serviços
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="<?=($data['informacoes']['menu_active'] === 'videos') ? 'active' : ''?>">
+                        <a href="<?=URL_BASE?>admin/videos">
                             <i class="fab fa-youtube"></i>Vídeos
                         </a>
                     </li>
-                    <li>
+                    <li class="<?=($data['informacoes']['menu_active'] === 'blogs') ? 'active' : ''?>">
                         <a href="#">
                             <i class="far fa-newspaper"></i>Blogs
                         </a>
                     </li>
-                    <li>
+                    <li class="<?=($data['informacoes']['menu_active'] === 'recomendacoes') ? 'active' : ''?>">
                         <a href="#">
                             <i class="far fa-comments"></i>Recomendações
                         </a>
@@ -66,12 +66,12 @@
                     <li class="nome-categoria">
                         Configurações
                     </li>
-                    <li>
+                    <li class="<?=($data['informacoes']['menu_active'] === 'usuario') ? 'active' : ''?>">
                         <a href="#">
                             <i class="fas fa-user"></i>Usuário
                         </a>
                     </li>
-                    <li>
+                    <li class="<?=($data['informacoes']['menu_active'] === 'site') ? 'active' : ''?>">
                         <a href="#">
                             <i class="fas fa-cogs"></i>Site
                         </a>

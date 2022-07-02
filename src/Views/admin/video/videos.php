@@ -1,13 +1,12 @@
 <?=$this->fetch('../commons/header.php', $data)?>
-
 <section class="dashboard">
     <div class="container">
         <div class="titulo-pagina">
-            <i class="fas fa-wrench"></i>Serviços
+            <i class="fab fa-youtube"></i>Vídeos
         </div>
         <div class="topo">
             <div class="btn">
-                <a href="<?=URL_BASE?>admin/servicos-create" class="btn">
+                <a href="<?=URL_BASE?>admin/videos-create" class="btn">
                     Cadastrar novo
                 </a>
             </div>
@@ -32,10 +31,10 @@
                     <tr>
                         <td class="id">1</td>
                         <td class="acao">
-                            <a href="<?=URL_BASE?>admin/servicos-edit/1"><i class="far fa-edit"></i></a>
+                            <a href="<?=URL_BASE?>admin/videos-edit/1"><i class="far fa-edit"></i></a>
                             <a href="#"><i class="fas fa-trash"></i></a>
                         </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
+                        <td class="titulo-item">Aqui vem o título do vídeo</td>
                         <td class="data">06/08/1991</td>
                     </tr>
                     <tr>
@@ -44,7 +43,7 @@
                             <a href="#"><i class="far fa-edit"></i></a>
                             <a href="#"><i class="fas fa-trash"></i></a>
                         </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
+                        <td class="titulo-item">Aqui vem o título do vídeo</td>
                         <td class="data">06/08/1991</td>
                     </tr>
                     <tr>
@@ -53,7 +52,7 @@
                             <a href="#"><i class="far fa-edit"></i></a>
                             <a href="#"><i class="fas fa-trash"></i></a>
                         </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
+                        <td class="titulo-item">Aqui vem o título do vídeo</td>
                         <td class="data">06/08/1991</td>
                     </tr>
                     <tr>
@@ -62,7 +61,7 @@
                             <a href="#"><i class="far fa-edit"></i></a>
                             <a href="#"><i class="fas fa-trash"></i></a>
                         </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
+                        <td class="titulo-item">Aqui vem o título do vídeo</td>
                         <td class="data">06/08/1991</td>
                     </tr>
                     <tr>
@@ -71,7 +70,7 @@
                             <a href="#"><i class="far fa-edit"></i></a>
                             <a href="#"><i class="fas fa-trash"></i></a>
                         </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
+                        <td class="titulo-item">Aqui vem o título do vídeo</td>
                         <td class="data">06/08/1991</td>
                     </tr>
                     <tr>
@@ -80,7 +79,7 @@
                             <a href="#"><i class="far fa-edit"></i></a>
                             <a href="#"><i class="fas fa-trash"></i></a>
                         </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
+                        <td class="titulo-item">Aqui vem o título do vídeo</td>
                         <td class="data">06/08/1991</td>
                     </tr>
                     <tr>
@@ -89,7 +88,7 @@
                             <a href="#"><i class="far fa-edit"></i></a>
                             <a href="#"><i class="fas fa-trash"></i></a>
                         </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
+                        <td class="titulo-item">Aqui vem o título do vídeo</td>
                         <td class="data">06/08/1991</td>
                     </tr>
                     <tr>
@@ -98,7 +97,7 @@
                             <a href="#"><i class="far fa-edit"></i></a>
                             <a href="#"><i class="fas fa-trash"></i></a>
                         </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
+                        <td class="titulo-item">Aqui vem o título do vídeo</td>
                         <td class="data">06/08/1991</td>
                     </tr>
                     <tr>
@@ -107,7 +106,7 @@
                             <a href="#"><i class="far fa-edit"></i></a>
                             <a href="#"><i class="fas fa-trash"></i></a>
                         </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
+                        <td class="titulo-item">Aqui vem o título do vídeo</td>
                         <td class="data">06/08/1991</td>
                     </tr>
                     <tr>
@@ -116,7 +115,7 @@
                             <a href="#"><i class="far fa-edit"></i></a>
                             <a href="#"><i class="fas fa-trash"></i></a>
                         </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
+                        <td class="titulo-item">Aqui vem o título do vídeo</td>
                         <td class="data">06/08/1991</td>
                     </tr>
                 </tbody>
