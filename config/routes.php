@@ -10,6 +10,11 @@ return function (App $app) {
     $app->get('/admin/servicos-create', '\App\Controller\ServicoController:servicos_create');
     $app->get('/admin/servicos-edit/{id}', '\App\Controller\ServicoController:servicos_edit');
 
+    // CONTROLADORES VÍDEOS
+    $app->get('/admin/videos', '\App\Controller\VideoController:videos');
+    $app->get('/admin/videos-create', '\App\Controller\VideooController:videos_create');
+    $app->get('/admin/videos-edit/{id}', '\App\Controller\VideoController:videos_edit');
+
     //ROTAS DO SITE
     $app->get('/', '\App\Controller\HomeController:home');
     $app->get('/a-rlbs-motors', '\App\Controller\HomeController:a_rlbs_motors');
