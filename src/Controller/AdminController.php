@@ -50,4 +50,15 @@ final class AdminController
         $renderer = new PhpRenderer(DIRETORIO_TEMPLATES_ADMIN."/servico");
         return $renderer->render($response, "create.php", $data);
     }
+    public function servicos_edit(
+        ServerRequestInterface $request, 
+        ResponseInterface $response,
+        $args
+    ) {
+        $data['informacoes'] = array(
+            'menu_active' => 'servicos'
+        );
+        $renderer = new PhpRenderer(DIRETORIO_TEMPLATES_ADMIN."/servico");
+        return $renderer->render($response, "edit.php", $data);
+    }
 }
