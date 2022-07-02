@@ -43,4 +43,33 @@ final class ServicoController
         $renderer = new PhpRenderer(DIRETORIO_TEMPLATES_ADMIN."/servico");
         return $renderer->render($response, "edit.php", $data);
     }
+    public function servicos_insert(
+        ServerRequestInterface $request, 
+        ResponseInterface $response,
+        $args
+    ) {
+        $titulo = $request->getParsedBody()['titulo'];
+        $data = $request->getParsedBody()['data'];
+        $descricao = $request->getParsedBody()['descricao'];
+        $status = $request->getParsedBody()['ativo'];
+
+        $campos = array(
+            'titulo' => $titulo,
+            'url_amigavel' => '',
+            'descricao' => $descricao,
+            'imagem_principal' => '',
+            'data_cadastro' => $data,
+            'status' => $status
+        );
+
+        echo "<pre>";
+        var_dump($campos);
+        exit();
+
+        $data['informacoes'] = array(
+            'menu_active' => 'servicos'
+        );
+        $renderer = new PhpRenderer(DIRETORIO_TEMPLATES_ADMIN."/servico");
+        return $renderer->render($response, "servicos.php", $data);
+    }
 }

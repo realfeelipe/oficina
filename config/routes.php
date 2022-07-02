@@ -11,6 +11,7 @@ return function (App $app) {
     $app->get('/admin/servicos', '\App\Controller\ServicoController:servicos');
     $app->get('/admin/servicos-create', '\App\Controller\ServicoController:servicos_create');
     $app->get('/admin/servicos-edit/{id}', '\App\Controller\ServicoController:servicos_edit');
+    $app->post('/admin/servicos_insert', '\App\Controller\ServicoController:servicos_insert');
 
     // CONTROLADORES VÍDEOS
     $app->get('/admin/videos', '\App\Controller\VideoController:videos');

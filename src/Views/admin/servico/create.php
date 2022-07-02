@@ -6,7 +6,7 @@
             <i class="fas fa-wrench"></i>Serviços - Novo
         </div>
         <div class="form">
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="<?=URL_BASE?>admin/servicos_insert" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="w-80">
                         <label for="">
@@ -46,8 +46,8 @@
                     <label for="">
                         Ativo
                         <select name="ativo" id="">
-                            <option value="sim">Sim</option>
-                            <option value="nao">Não</option>
+                            <option value="s">Sim</option>
+                            <option value="n">Não</option>
                         </select>
                     </label>
                 </div>
