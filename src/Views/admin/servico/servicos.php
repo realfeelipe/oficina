@@ -32,7 +32,7 @@
                     <tr>
                         <td class="id">1</td>
                         <td class="acao">
-                            <a href="<?=URL_BASE?>admin/servicos-edit.php"><i class="far fa-edit"></i></a>
+                            <a href="<?=URL_BASE?>admin/servicos-edit"><i class="far fa-edit"></i></a>
                             <a href="#"><i class="fas fa-trash"></i></a>
                         </td>
                         <td class="titulo-item">Aqui vem o título do serviço</td>
