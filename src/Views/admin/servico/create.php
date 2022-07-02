@@ -35,89 +35,24 @@
                         Imagem Principal
                         <input type="file" name="imagem_principal" id="imagem">
                     </label>
-                    <div class="img">
-                        <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                        <label for="">
-                            <input type="checkbox" name="excluir_imagem_principal" id="">
-                            Excluir imagem
-                        </label>
-                    </div>
                 </div>
                 <div class="row">
                     <label for="">
                         Galeria de Imagens
                         <input type="file" name="galeria_imagens[]" id="imagem" multiple>
                     </label>
-                    <div class="d-flex">
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="">
-                            Ativo
-                            <select name="ativo" id="">
-                                <option value="sim">Sim</option>
-                                <option value="nao">Não</option>
-                            </select>
-                        </label>
-                    </div>
-                    <div class="row">
-                        <button type="submit">Salvar</button>
-                    </div>
+                </div>
+                <div class="row">
+                    <label for="">
+                        Ativo
+                        <select name="ativo" id="">
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="row">
+                    <button type="submit">Salvar</button>
                 </div>
             </form>
         </div>
