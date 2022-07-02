@@ -11,16 +11,14 @@
                     <div class="w-80">
                         <label for="">
                             Título
-                            <input type="text" name="titulo" id="" value="<?=$data['informacoes']['id']?>">
+                            <input type="text" name="titulo" id="" value="<?=$data['informacoes']['id_servico']?>">
                         </label>
-                        
                     </div>
                     <div class="w-20">
                         <label for="">
                             Data
                             <input type="date" name="data" id="">
                         </label>
-                        
                     </div>
                 </div>
                 <div class="row">
