@@ -5,6 +5,7 @@ namespace App\Controller;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Views\PhpRenderer;
+use App\Model\Servico;
 
 final class ServicoController
 {

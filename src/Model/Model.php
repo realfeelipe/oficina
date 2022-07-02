@@ -1,8 +1,8 @@
 <?php 
 
-namespace DEV;
+namespace App\Model;
 
-use DEV\Sql;
+use App\Model\Sql;
 
 class Model extends Sql {
 

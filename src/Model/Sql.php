@@ -1,6 +1,6 @@
 <?php 
 
-namespace DEV;
+namespace App\Model;
 
 class Sql {
 

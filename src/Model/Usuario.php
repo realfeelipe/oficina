@@ -1,7 +1,7 @@
 <?php 
-namespace DEV;
+namespace App\Model;
 
-use DEV\Model;
+use App\Model\Model;
 
 class Usuario extends Model {
 	
