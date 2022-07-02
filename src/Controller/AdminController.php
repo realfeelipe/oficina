@@ -57,8 +57,7 @@ final class AdminController
     ) {
         $id = $args['id'];
         $data['informacoes'] = array(
-            'menu_active' => 'servicos',
-            'id_servico' => $id
+            'menu_active' => 'servicos'
         );
         $renderer = new PhpRenderer(DIRETORIO_TEMPLATES_ADMIN."/servico");
         return $renderer->render($response, "edit.php", $data);

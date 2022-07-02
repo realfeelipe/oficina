@@ -11,7 +11,7 @@
                     <div class="w-80">
                         <label for="">
                             Título
-                            <input type="text" name="titulo" id="" value="<?=$data['informacoes']['id_servico']?>">
+                            <input type="text" name="titulo" id="">
                         </label>
                         
                     </div>
