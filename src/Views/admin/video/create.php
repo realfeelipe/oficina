@@ -3,7 +3,7 @@
 <section class="dashboard">
     <div class="container">
         <div class="titulo-pagina">
-            <i class="fas fa-wrench"></i>Serviços - Novo
+            <i class="fab fa-youtube"></i>Vídeos - Novo
         </div>
         <div class="form">
             <form action="#" method="post" enctype="multipart/form-data">
@@ -13,7 +13,6 @@
                             Título
                             <input type="text" name="titulo" id="">
                         </label>
-                        
                     </div>
                     <div class="w-20">
                         <label for="">
@@ -25,21 +24,14 @@
                 </div>
                 <div class="row">
                     <label for="">
-                        Descrição
-                        <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                        Link do YouTube
+                        <input type="text" name="link_video" id="">
                     </label>
-                    
                 </div>
                 <div class="row">
                     <label for="">
                         Imagem Principal
                         <input type="file" name="imagem_principal" id="imagem">
-                    </label>
-                </div>
-                <div class="row">
-                    <label for="">
-                        Galeria de Imagens
-                        <input type="file" name="galeria_imagens[]" id="imagem" multiple>
                     </label>
                 </div>
                 <div class="row">
@@ -73,9 +65,9 @@
 </script> -->
 
 <!-- CKEditor v.4 -->
-<script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
 <script>
     CKEDITOR.replace( 'descricao' );
-</script>
+</script> -->
 
 <?=$this->fetch('../commons/footer.php')?>

@@ -12,8 +12,13 @@ return function (App $app) {
 
     // CONTROLADORES VÍDEOS
     $app->get('/admin/videos', '\App\Controller\VideoController:videos');
-    $app->get('/admin/videos-create', '\App\Controller\VideooController:videos_create');
+    $app->get('/admin/videos-create', '\App\Controller\VideoController:videos_create');
     $app->get('/admin/videos-edit/{id}', '\App\Controller\VideoController:videos_edit');
+
+    // CONTROLADORES BLOG
+    $app->get('/admin/blogs', '\App\Controller\BlogController:blogs');
+    $app->get('/admin/blogs-create', '\App\Controller\BlogController:blogs_create');
+    $app->get('/admin/blogs-edit/{id}', '\App\Controller\BlogController:blogs_edit');
 
     //ROTAS DO SITE
     $app->get('/', '\App\Controller\HomeController:home');

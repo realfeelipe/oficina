@@ -54,7 +54,7 @@
                         </a>
                     </li>
                     <li class="<?=($data['informacoes']['menu_active'] === 'blogs') ? 'active' : ''?>">
-                        <a href="#">
+                        <a href="<?=URL_BASE?>admin/blogs">
                             <i class="far fa-newspaper"></i>Blogs
                         </a>
                     </li>

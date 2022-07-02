@@ -3,7 +3,7 @@
 <section class="dashboard">
     <div class="container">
         <div class="titulo-pagina">
-            <i class="fas fa-wrench"></i>Serviços - Novo
+            <i class="far fa-newspaper"></i>Blogs - Editar
         </div>
         <div class="form">
             <form action="#" method="post" enctype="multipart/form-data">
@@ -13,34 +13,38 @@
                             Título
                             <input type="text" name="titulo" id="">
                         </label>
-                        
                     </div>
                     <div class="w-20">
                         <label for="">
                             Data
                             <input type="date" name="data" id="">
                         </label>
-                        
                     </div>
+                </div>
+                <div class="row">
+                    <label for="">
+                        Autor
+                        <input type="text" name="autor" id="">
+                    </label>
                 </div>
                 <div class="row">
                     <label for="">
                         Descrição
                         <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
                     </label>
-                    
                 </div>
                 <div class="row">
                     <label for="">
                         Imagem Principal
                         <input type="file" name="imagem_principal" id="imagem">
                     </label>
-                </div>
-                <div class="row">
-                    <label for="">
-                        Galeria de Imagens
-                        <input type="file" name="galeria_imagens[]" id="imagem" multiple>
-                    </label>
+                    <div class="img">
+                        <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
+                        <label for="">
+                            <input type="checkbox" name="excluir_imagem_principal" id="">
+                            Excluir imagem
+                        </label>
+                    </div>
                 </div>
                 <div class="row">
                     <label for="">

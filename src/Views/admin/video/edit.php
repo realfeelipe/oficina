@@ -3,7 +3,7 @@
 <section class="dashboard">
     <div class="container">
         <div class="titulo-pagina">
-            <i class="fas fa-wrench"></i>Serviços - Editar
+            <i class="fab fa-youtube"></i>Vídeos - Editar
         </div>
         <div class="form">
             <form action="#" method="post" enctype="multipart/form-data">
@@ -13,22 +13,19 @@
                             Título
                             <input type="text" name="titulo" id="">
                         </label>
-                        
                     </div>
                     <div class="w-20">
                         <label for="">
                             Data
                             <input type="date" name="data" id="">
                         </label>
-                        
                     </div>
                 </div>
                 <div class="row">
                     <label for="">
-                        Descrição
-                        <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                        Link do YouTube
+                        <input type="text" name="link_video" id="">
                     </label>
-                    
                 </div>
                 <div class="row">
                     <label for="">
@@ -41,82 +38,6 @@
                             <input type="checkbox" name="excluir_imagem_principal" id="">
                             Excluir imagem
                         </label>
-                    </div>
-                </div>
-                <div class="row">
-                    <label for="">
-                        Galeria de Imagens
-                        <input type="file" name="galeria_imagens[]" id="imagem" multiple>
-                    </label>
-                    <div class="d-flex">
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="">
-                            Ativo
-                            <select name="ativo" id="">
-                                <option value="sim">Sim</option>
-                                <option value="nao">Não</option>
-                            </select>
-                        </label>
-                    </div>
-                    <div class="row">
-                        <button type="submit">Salvar</button>
                     </div>
                 </div>
             </form>
@@ -138,9 +59,9 @@
 </script> -->
 
 <!-- CKEditor v.4 -->
-<script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
 <script>
     CKEDITOR.replace( 'descricao' );
-</script>
+</script> -->
 
 <?=$this->fetch('../commons/footer.php')?>
