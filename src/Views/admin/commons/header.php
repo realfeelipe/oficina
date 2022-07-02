@@ -21,8 +21,8 @@
                             <i class="fas fa-sort-down"></i>
                             <img src="<?=URL_BASE?>resources/imagens/missao.png" alt="">
                             <ul class="dropdown">
-                                <li><a href="#">Perfil</a></li>
-                                <li><a href="#">Configurações</a></li>
+                                <li><a href="<?=URL_BASE?>admin/perfil">Perfil</a></li>
+                                <li><a href="<?=URL_BASE?>admin/site">Configurações</a></li>
                                 <li><a href="#">Sair</a></li>
                             </ul>
                         </li>
@@ -66,13 +66,13 @@
                     <li class="nome-categoria">
                         Configurações
                     </li>
-                    <li class="<?=($data['informacoes']['menu_active'] === 'usuario') ? 'active' : ''?>">
-                        <a href="#">
+                    <li class="<?=($data['informacoes']['menu_active'] === 'perfil') ? 'active' : ''?>">
+                        <a href="<?=URL_BASE?>admin/perfil">
                             <i class="fas fa-user"></i>Usuário
                         </a>
                     </li>
                     <li class="<?=($data['informacoes']['menu_active'] === 'site') ? 'active' : ''?>">
-                        <a href="#">
+                        <a href="<?=URL_BASE?>admin/site">
                             <i class="fas fa-cogs"></i>Site
                         </a>
                     </li>

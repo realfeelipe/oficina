@@ -4,6 +4,8 @@ return function (App $app) {
     // CONTROLADORES ADMIN
     $app->get('/admin-login', '\App\Controller\AdminController:login');
     $app->get('/dashboard', '\App\Controller\AdminController:dashboard');
+    $app->get('/admin/perfil', '\App\Controller\AdminController:perfil');
+    $app->get('/admin/site', '\App\Controller\AdminController:site');
 
     // CONTROLADORES SERVIÇOS
     $app->get('/admin/servicos', '\App\Controller\ServicoController:servicos');
