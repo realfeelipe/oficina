@@ -7,7 +7,7 @@ return function (App $app) {
     $app->get('/dashboard', '\App\Controller\AdminController:dashboard');
     $app->get('/admin/servicos', '\App\Controller\AdminController:servicos');
     $app->get('/admin/servicos-create', '\App\Controller\AdminController:servicos_create');
-    $app->get('/admin/servicos-edit', '\App\Controller\AdminController:servicos_edit');
+    $app->get('/admin/servicos-edit/{id}', '\App\Controller\AdminController:servicos_edit');
 
     $app->get('/a-rlbs-motors', '\App\Controller\HomeController:a_rlbs_motors');
     $app->get('/servicos', '\App\Controller\HomeController:servicos');
