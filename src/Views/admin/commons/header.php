@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li class="<?=($data['informacoes']['menu_active'] === 'recomendacoes') ? 'active' : ''?>">
-                        <a href="#">
+                        <a href="<?=URL_BASE?>admin/recomendacoes">
                             <i class="far fa-comments"></i>Recomendações
                         </a>
                     </li>

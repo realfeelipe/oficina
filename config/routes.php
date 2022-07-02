@@ -20,6 +20,11 @@ return function (App $app) {
     $app->get('/admin/blogs-create', '\App\Controller\BlogController:blogs_create');
     $app->get('/admin/blogs-edit/{id}', '\App\Controller\BlogController:blogs_edit');
 
+    // CONTROLADORES RECOMENDAÇÕES
+    $app->get('/admin/recomendacoes', '\App\Controller\RecomendacoesController:recomendacoes');
+    $app->get('/admin/recomendacoes-create', '\App\Controller\RecomendacoesController:recomendacoes_create');
+    $app->get('/admin/recomendacoes-edit/{id}', '\App\Controller\RecomendacoesController:recomendacoes_edit');
+
     //ROTAS DO SITE
     $app->get('/', '\App\Controller\HomeController:home');
     $app->get('/a-rlbs-motors', '\App\Controller\HomeController:a_rlbs_motors');
