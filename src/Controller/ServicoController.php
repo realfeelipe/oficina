@@ -61,7 +61,9 @@ final class ServicoController
             'data_cadastro' => $data,
             'status' => $status
         );
-
+        $servicos = new Servico();
+        $servicos->insertServico($campos);
+        
         echo "<pre>";
         var_dump($campos);
         exit();
