@@ -40,10 +40,6 @@
                     </label>
                 </div>
                 <div class="row">
-                    <label for="">
-                        Foto do Cliente
-                        <input type="file" name="foto_cliente" id="imagem">
-                    </label>
                     <div class="img">
                         <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
                         <label for="">
