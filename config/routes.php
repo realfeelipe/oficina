@@ -1,14 +1,17 @@
 <?php
 use Slim\App;
 return function (App $app) {
-    $app->get('/', '\App\Controller\HomeController:home');
-
+    // CONTROLADORES ADMIN
     $app->get('/admin-login', '\App\Controller\AdminController:login');
     $app->get('/dashboard', '\App\Controller\AdminController:dashboard');
-    $app->get('/admin/servicos', '\App\Controller\AdminController:servicos');
-    $app->get('/admin/servicos-create', '\App\Controller\AdminController:servicos_create');
-    $app->get('/admin/servicos-edit/{id}', '\App\Controller\AdminController:servicos_edit');
 
+    // CONTROLADORES SERVIÇOS
+    $app->get('/admin/servicos', '\App\Controller\ServicoController:servicos');
+    $app->get('/admin/servicos-create', '\App\Controller\ServicoController:servicos_create');
+    $app->get('/admin/servicos-edit/{id}', '\App\Controller\ServicoController:servicos_edit');
+
+    //ROTAS DO SITE
+    $app->get('/', '\App\Controller\HomeController:home');
     $app->get('/a-rlbs-motors', '\App\Controller\HomeController:a_rlbs_motors');
     $app->get('/servicos', '\App\Controller\HomeController:servicos');
     $app->get('/videos', '\App\Controller\HomeController:videos');
