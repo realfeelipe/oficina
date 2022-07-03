@@ -16,7 +16,12 @@ final class ServicoController
     ) {
         $servicos = new Servico();
 
-        $lista = $servicos->selectServicosPage(10, 0);
+        $limit = 1;
+        $paginaAtual = isset($_GET['page']) ? $_GET['page'] : 1;
+        $offset = ($paginaAtual*$limit) - $limit;
+        $qntTotal = count($servicos->selectServico('*', array('1'=>'1')));
+
+        $lista = $servicos->selectServicosPage($limit, $offset);
 
         $data['informacoes'] = array(
             'menu_active' => 'servicos',
@@ -109,9 +114,6 @@ final class ServicoController
             }
         }
         header('Location: '.URL_BASE.'admin/servicos');
-        
-        echo "<pre>";
-        var_dump($campos);
         exit();
 
         // $data['informacoes'] = array(
