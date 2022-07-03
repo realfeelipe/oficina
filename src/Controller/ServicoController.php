@@ -53,20 +53,35 @@ final class ServicoController
         $descricao = $request->getParsedBody()['descricao'];
         $status = $request->getParsedBody()['ativo'];
 
+        if($request->getUploadedFiles()['imagem_principal']){
+            $imagem_principal = $request->getUploadedFiles()['imagem_principal'];
+        }else{
+            $imagem_principal = false;
+        }
+
+        $nome_imagem_principal = '';
+        if($imagem_principal){
+            if($imagem_principal->getError() === UPLOAD_ERR_OK){
+                $extensao = pathinfo($imagem_principal->getClientFilename(), PATHINFO_EXTENSION);
+
+                $nome = md5(uniqid(rand(), true)).pathinfo($imagem_principal->getClientFilename(),PATHINFO_FILENAME).".".$extensao;
+
+                $nome_imagem_principal['imagem_principal'] = "resources/imagens/servicos/".$nome;
+
+                $imagem_principal->moveTo($nome_imagem_principal['imagem_principal']);
+            }
+        }
+
         $campos = array(
             'titulo' => $titulo,
             'url_amigavel' => $this->gerarUrlAmigavel($titulo),
             'descricao' => $descricao,
-            'imagem_principal' => '',
+            'imagem_principal' => $nome_imagem_principal,
             'data_cadastro' => $data,
             'status' => $status
         );
         $servicos = new Servico();
         $servicos->insertServico($campos);
-        
-        echo "<pre>";
-        var_dump($campos);
-        exit();
 
         $data['informacoes'] = array(
             'menu_active' => 'servicos'
