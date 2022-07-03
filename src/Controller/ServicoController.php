@@ -100,7 +100,7 @@ final class ServicoController
                 $foto = array();
                 if($imagem->getError() === UPLOAD_ERR_OK){
                     $extensao = pathinfo($imagem->getClientFilename(), PATHINFO_EXTENSION);
-                    $nome = md5(uniqid(rand(), true)).pathinfo($imagem->getClientFilename(), PATHINFO_FILENAME).".".$entensao;
+                    $nome = md5(uniqid(rand(), true)).pathinfo($imagem->getClientFilename(), PATHINFO_FILENAME).".".$extensao;
                     $foto["caminho_imagem"] = "resources/imagens/servicos/".$nome;
                     $imagem->moveTo($foto["caminho_imagem"]);
                     $foto['id_servico'] = $id_servico;
