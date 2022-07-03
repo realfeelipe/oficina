@@ -29,96 +29,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="id">1</td>
-                        <td class="acao">
-                            <a href="<?=URL_BASE?>admin/servicos-edit/1"><i class="far fa-edit"></i></a>
-                            <a href="#"><i class="fas fa-trash"></i></a>
-                        </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
-                        <td class="data">06/08/1991</td>
-                    </tr>
-                    <tr>
-                        <td class="id">2</td>
-                        <td class="acao">
-                            <a href="#"><i class="far fa-edit"></i></a>
-                            <a href="#"><i class="fas fa-trash"></i></a>
-                        </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
-                        <td class="data">06/08/1991</td>
-                    </tr>
-                    <tr>
-                        <td class="id">3</td>
-                        <td class="acao">
-                            <a href="#"><i class="far fa-edit"></i></a>
-                            <a href="#"><i class="fas fa-trash"></i></a>
-                        </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
-                        <td class="data">06/08/1991</td>
-                    </tr>
-                    <tr>
-                        <td class="id">4</td>
-                        <td class="acao">
-                            <a href="#"><i class="far fa-edit"></i></a>
-                            <a href="#"><i class="fas fa-trash"></i></a>
-                        </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
-                        <td class="data">06/08/1991</td>
-                    </tr>
-                    <tr>
-                        <td class="id">5</td>
-                        <td class="acao">
-                            <a href="#"><i class="far fa-edit"></i></a>
-                            <a href="#"><i class="fas fa-trash"></i></a>
-                        </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
-                        <td class="data">06/08/1991</td>
-                    </tr>
-                    <tr>
-                        <td class="id">6</td>
-                        <td class="acao">
-                            <a href="#"><i class="far fa-edit"></i></a>
-                            <a href="#"><i class="fas fa-trash"></i></a>
-                        </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
-                        <td class="data">06/08/1991</td>
-                    </tr>
-                    <tr>
-                        <td class="id">7</td>
-                        <td class="acao">
-                            <a href="#"><i class="far fa-edit"></i></a>
-                            <a href="#"><i class="fas fa-trash"></i></a>
-                        </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
-                        <td class="data">06/08/1991</td>
-                    </tr>
-                    <tr>
-                        <td class="id">8</td>
-                        <td class="acao">
-                            <a href="#"><i class="far fa-edit"></i></a>
-                            <a href="#"><i class="fas fa-trash"></i></a>
-                        </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
-                        <td class="data">06/08/1991</td>
-                    </tr>
-                    <tr>
-                        <td class="id">9</td>
-                        <td class="acao">
-                            <a href="#"><i class="far fa-edit"></i></a>
-                            <a href="#"><i class="fas fa-trash"></i></a>
-                        </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
-                        <td class="data">06/08/1991</td>
-                    </tr>
-                    <tr>
-                        <td class="id">10</td>
-                        <td class="acao">
-                            <a href="#"><i class="far fa-edit"></i></a>
-                            <a href="#"><i class="fas fa-trash"></i></a>
-                        </td>
-                        <td class="titulo-item">Aqui vem o título do serviço</td>
-                        <td class="data">06/08/1991</td>
-                    </tr>
+                    <?php
+                        foreach($data['informacoes']['lista'] as $servico){ ?>
+                            <tr>
+                                <td class="id"><?=$servico['id']?></td>
+                                <td class="acao">
+                                    <a href="<?=URL_BASE?>admin/servicos-edit/<?=$servico['id']?>"><i class="far fa-edit"></i></a>
+                                    <a href="#"><i class="fas fa-trash"></i></a>
+                                </td>
+                                <td class="titulo-item"><?=$servico['titulo']?></td>
+                                <td class="data"><?=$servico['data_cadastro']?></td>
+                            </tr>
+                        <?php }
+                    ?>
                 </tbody>
             </table>
             <div class="paginacao">

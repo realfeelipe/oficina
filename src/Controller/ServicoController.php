@@ -14,8 +14,13 @@ final class ServicoController
         ResponseInterface $response,
         $args
     ) {
+        $servicos = new Servico();
+
+        $lista = $servicos->selectServicosPage(10, 0);
+
         $data['informacoes'] = array(
-            'menu_active' => 'servicos'
+            'menu_active' => 'servicos',
+            'lista' => $lista
         );
         $renderer = new PhpRenderer(DIRETORIO_TEMPLATES_ADMIN."/servico");
         return $renderer->render($response, "servicos.php", $data);
@@ -82,16 +87,38 @@ final class ServicoController
         );
         $servicos = new Servico();
         $servicos->insertServico($campos);
-        
-        echo "<pre>";
-        var_dump($campos);
-        exit();
 
-        $data['informacoes'] = array(
-            'menu_active' => 'servicos'
-        );
-        $renderer = new PhpRenderer(DIRETORIO_TEMPLATES_ADMIN."/servico");
-        return $renderer->render($response, "servicos.php", $data);
+        $id_servico = $servicos->getUltimoServico()['id'];
+
+        if($request->getUploadedFiles()['galeria_imagens']){
+            $galeria = $request->getUploadedFiles()['galeria_imagens'];
+        }else{
+            $galeria = false;
+        }
+        if($galeria){
+            foreach($galeria as $imagem){
+                $foto = array();
+                if($imagem->getError() === UPLOAD_ERR_OK){
+                    $extensao = pathinfo($imagem->getClientFilename(), PATHINFO_EXTENSION);
+                    $nome = md5(uniqid(rand(), true)).pathinfo($imagem->getClientFilename(), PATHINFO_FILENAME).".".$entensao;
+                    $foto["caminho_imagem"] = "resources/imagens/servicos/".$nome;
+                    $imagem->moveTo($foto["caminho_imagem"]);
+                    $foto['id_servico'] = $id_servico;
+                    $servicos->insertFotoGaleria($foto);
+                }
+            }
+        }
+        header('Location: '.URL_BASE.'admin/servicos');
+        
+        // echo "<pre>";
+        // var_dump($campos);
+        // exit();
+
+        // $data['informacoes'] = array(
+        //     'menu_active' => 'servicos'
+        // );
+        // $renderer = new PhpRenderer(DIRETORIO_TEMPLATES_ADMIN."/servico");
+        // return $renderer->render($response, "servicos.php", $data);
     }
     private function gerarUrlAmigavel($url) {
 

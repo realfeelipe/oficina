@@ -10,42 +10,42 @@
                 <div class="row">
                     <div class="w-80">
                         <label for="">
-                            Título
-                            <input type="text" name="titulo" id="">
+                            Título*
+                            <input type="text" name="titulo" id="" required>
                         </label>
                         
                     </div>
                     <div class="w-20">
                         <label for="">
-                            Data
-                            <input type="date" name="data" id="">
+                            Data*
+                            <input type="date" name="data" id="" required>
                         </label>
                         
                     </div>
                 </div>
                 <div class="row">
                     <label for="">
-                        Descrição
-                        <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                        Descrição*
+                        <textarea name="descricao" id="descricao" cols="30" rows="10" required></textarea>
                     </label>
                     
                 </div>
                 <div class="row">
                     <label for="">
-                        Imagem Principal
-                        <input type="file" name="imagem_principal" id="imagem">
+                        Imagem Principal*
+                        <input type="file" name="imagem_principal" id="imagem" required accept="image/*">
                     </label>
                 </div>
                 <div class="row">
                     <label for="">
                         Galeria de Imagens
-                        <input type="file" name="galeria_imagens[]" id="imagem" multiple>
+                        <input type="file" name="galeria_imagens[]" id="imagem" multiple accept="image/*">
                     </label>
                 </div>
                 <div class="row">
                     <label for="">
-                        Ativo
-                        <select name="ativo" id="">
+                        Ativo*
+                        <select name="ativo" id="" required>
                             <option value="s">Sim</option>
                             <option value="n">Não</option>
                         </select>

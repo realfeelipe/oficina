@@ -35,4 +35,16 @@ class Servico extends Model {
 	{
 		return $this->select($this->table, $campos, $where);
 	}
+
+	function getUltimoServico(){
+		$sql = "SELECT * FROM ".$this->table." ORDER BY id DESC LIMIT 1";
+		return $this->querySelect($sql)[0];
+	}
+	function insertFotoGaleria($campos){
+		$this->insert('galeria_'.$this->table, $campos);
+	}
+	function selectServicosPage($limit, $offset){
+		$sql = "SELECT * FROM ".$this->table." ORDER BY id DESC LIMIT ".$offset.", ".$limit;
+		return $this->querySelect($sql);
+	}
 }
