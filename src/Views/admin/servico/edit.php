@@ -11,20 +11,20 @@
                     <div class="w-80">
                         <label for="">
                             Título
-                            <input type="text" name="titulo" id="">
+                            <input type="text" name="titulo" id="" value="<?=$data['informacoes']['servico']['titulo']?>">
                         </label>
                     </div>
                     <div class="w-20">
                         <label for="">
                             Data
-                            <input type="date" name="data" id="">
+                            <input type="date" name="data" id="" value="<?=date('Y-m-d', strtotima($data['informacoes']['servico']['data_cadastro']))?>">
                         </label>
                     </div>
                 </div>
                 <div class="row">
                     <label for="">
                         Descrição
-                        <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                        <textarea name="descricao" id="descricao" cols="30" rows="10"><?=$data['informacoes']['servico']['descricao']?></textarea>
                     </label>
                     
                 </div>

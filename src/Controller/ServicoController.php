@@ -53,8 +53,11 @@ final class ServicoController
         $args
     ) {
         $id = $args['id'];
+        $servicos = new Servico();
+        $resultado = $servicos->selectServico('*', array('id' => $id))[0];
         $data['informacoes'] = array(
-            'menu_active' => 'servicos'
+            'menu_active' => 'servicos',
+            'servico' => $resultado
         );
         $renderer = new PhpRenderer(DIRETORIO_TEMPLATES_ADMIN."/servico");
         return $renderer->render($response, "edit.php", $data);
