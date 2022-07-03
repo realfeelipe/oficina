@@ -59,16 +59,16 @@ final class ServicoController
             $imagem_principal = false;
         }
 
-        $nome_imagem_principal = '';
+        $nome_imagem_principal = "";
         if($imagem_principal){
             if($imagem_principal->getError() === UPLOAD_ERR_OK){
                 $extensao = pathinfo($imagem_principal->getClientFilename(), PATHINFO_EXTENSION);
 
-                $nome = md5(uniqid(rand(), true)).pathinfo($imagem_principal->getClientFilename(),PATHINFO_FILENAME).".".$extensao;
+                $nome = md5(uniqid(rand(), true)).pathinfo($imagem_principal->getClientFilename(), PATHINFO_FILENAME).".".$extensao;
 
-                $nome_imagem_principal['imagem_principal'] = "resources/imagens/servicos/".$nome;
+                $nome_imagem_principal = "resources/imagens/servicos/".$nome;
 
-                $imagem_principal->moveTo($nome_imagem_principal['imagem_principal']);
+                $imagem_principal->moveTo($nome_imagem_principal);
             }
         }
 
