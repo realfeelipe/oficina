@@ -16,7 +16,7 @@ final class ServicoController
     ) {
         $servicos = new Servico();
 
-        $limit = 1;
+        $limit = 10;
         $paginaAtual = isset($_GET['page']) ? $_GET['page'] : 1;
         $offset = ($paginaAtual*$limit) - $limit;
         $qntTotal = count($servicos->selectServico('*', array('1'=>'1')));
