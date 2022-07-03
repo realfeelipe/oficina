@@ -21,11 +21,17 @@ final class ServicoController
         $offset = ($paginaAtual*$limit) - $limit;
         $qntTotal = count($servicos->selectServico('*', array('1'=>'1')));
 
+        $proximaPagina = ($qntTotal > ($paginaAtual*$limit)) ? URL_BASE."admin/servicos?page=".($paginaAtual+1) : false;
+        $paginaAnterior = ($paginaAtual > 1) ? URL_BASE."admin/servicos?page=".($paginaAtual-1) : false;
+
         $lista = $servicos->selectServicosPage($limit, $offset);
 
         $data['informacoes'] = array(
             'menu_active' => 'servicos',
-            'lista' => $lista
+            'lista' => $lista,
+            'paginaAtual' => $paginaAtual,
+            'proximaPagina' => $proximaPagina,
+            'paginaAnterior' => $paginaAnterior
         );
         $renderer = new PhpRenderer(DIRETORIO_TEMPLATES_ADMIN."/servico");
         return $renderer->render($response, "servicos.php", $data);

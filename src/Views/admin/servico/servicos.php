@@ -45,9 +45,13 @@
                 </tbody>
             </table>
             <div class="paginacao">
-                <a href="#"><i class="fas fa-arrow-circle-left"></i></a>
+                <?php if(isset($data['informacoes']['paginaAnterior'])){ ?>
+                <a href="<?=$data['informacoes']['paginaAnterior']?>"><i class="fas fa-arrow-circle-left"></i></a>
+                <?php } ?>
                 <span>1</span>
-                <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                <?php if(isset($data['informacoes']['proximaPagina'])){ ?>
+                <a href="<?=$data['informacoes']['proximaPagina']?>"><i class="fas fa-arrow-circle-right"></i></a>
+                <?php } ?>
             </div>
         </div>
 
