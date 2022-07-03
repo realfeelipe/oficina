@@ -110,9 +110,9 @@ final class ServicoController
         }
         header('Location: '.URL_BASE.'admin/servicos');
         
-        // echo "<pre>";
-        // var_dump($campos);
-        // exit();
+        echo "<pre>";
+        var_dump($campos);
+        exit();
 
         // $data['informacoes'] = array(
         //     'menu_active' => 'servicos'

@@ -38,7 +38,7 @@
                                     <a href="#"><i class="fas fa-trash"></i></a>
                                 </td>
                                 <td class="titulo-item"><?=$servico['titulo']?></td>
-                                <td class="data"><?=$servico['data_cadastro']?></td>
+                                <td class="data"><?=date("d/m/Y", strtotime($servico['data_cadastro']))?></td>
                             </tr>
                         <?php }
                     ?>
