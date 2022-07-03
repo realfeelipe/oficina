@@ -34,7 +34,10 @@ class Sql {
 
 	private function bindParam($statement, $key, $value)
 	{
-		$value = strip_tags(trim($value));
+		if($key !== ':descricao'){
+			$value = strip_tags(trim($value));
+		}
+		
 		$statement->bindParam($key, $value);
 	}
 
