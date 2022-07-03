@@ -34,7 +34,7 @@
                         <input type="file" name="imagem_principal" id="imagem">
                     </label>
                     <div class="img">
-                        <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
+                        <img src="<?=URL_BASE.$data['informacoes']['servico']['imagem_principal']?>" alt="">
                         <label for="">
                             <input type="checkbox" name="excluir_imagem_principal" id="">
                             Excluir imagem
