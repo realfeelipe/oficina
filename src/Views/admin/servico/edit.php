@@ -17,7 +17,7 @@
                     <div class="w-20">
                         <label for="">
                             Data
-                            <input type="date" name="data" id="" value="<?=date('Y-m-d', strtotima($data['informacoes']['servico']['data_cadastro']))?>">
+                            <input type="date" name="data" id="" value="<?=date('Y-m-d', strtotime($data['informacoes']['servico']['data_cadastro']))?>">
                         </label>
                     </div>
                 </div>
