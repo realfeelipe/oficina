@@ -66,9 +66,9 @@ final class ServicoController
 
                 $nome = md5(uniqid(rand(), true)).pathinfo($imagem_principal->getClientFilename(),PATHINFO_FILENAME).".".$extensao;
 
-                $nome_imagem_principal["imagem_principal"] = "resources/imagens/servicos/".$nome;
+                $nome_imagem_principal['imagem_principal'] = "resources/imagens/servicos/".$nome;
 
-                $imagem_principal->moveTo($nome_imagem_principal["imagem_principal"]);
+                $imagem_principal->moveTo($nome_imagem_principal['imagem_principal']);
             }
         }
 
@@ -82,6 +82,10 @@ final class ServicoController
         );
         $servicos = new Servico();
         $servicos->insertServico($campos);
+        
+        echo "<pre>";
+        var_dump($campos);
+        exit();
 
         $data['informacoes'] = array(
             'menu_active' => 'servicos'
