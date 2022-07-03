@@ -46,7 +46,7 @@ class Servico extends Model {
 	function selectGaleria($id):array
 	{
 		$sql = "SELECT * FROM galeria_".$this->table." WHERE id_servico = ".$id;
-		return $this->querySelect($this->table, $campos, $where);
+		return $this->querySelect($sql);
 	}
 	function selectServicosPage($limit, $offset){
 		$sql = "SELECT * FROM ".$this->table." ORDER BY id DESC LIMIT ".$offset.", ".$limit;
