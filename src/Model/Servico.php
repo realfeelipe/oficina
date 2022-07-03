@@ -43,6 +43,11 @@ class Servico extends Model {
 	function insertFotoGaleria($campos){
 		$this->insert('galeria_'.$this->table, $campos);
 	}
+	function selectGaleria($id):array
+	{
+		$sql = "SELECT * FROM galeria_".$this->table." WHERE id_servico = ".$id;
+		return $this->querySelect($this->table, $campos, $where);
+	}
 	function selectServicosPage($limit, $offset){
 		$sql = "SELECT * FROM ".$this->table." ORDER BY id DESC LIMIT ".$offset.", ".$limit;
 		return $this->querySelect($sql);

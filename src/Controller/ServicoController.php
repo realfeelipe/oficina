@@ -55,6 +55,7 @@ final class ServicoController
         $id = $args['id'];
         $servicos = new Servico();
         $resultado = $servicos->selectServico('*', array('id' => $id))[0];
+        $resultado['galeria'] = $servicos->selectGaleria($id);
         $data['informacoes'] = array(
             'menu_active' => 'servicos',
             'servico' => $resultado

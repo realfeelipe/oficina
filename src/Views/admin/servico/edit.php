@@ -47,62 +47,15 @@
                         <input type="file" name="galeria_imagens[]" id="imagem" multiple>
                     </label>
                     <div class="d-flex">
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
-                        <div class="img">
-                            <img src="<?=URL_BASE?>resources/imagens/valores.png" alt="">
-                            <label for="">
-                                <input type="checkbox" name="excluir_imagem_principal" id="">
-                                Excluir imagem
-                            </label>
-                        </div>
+                        <?php foreach($data['informacoes']['servico']['galeria'] as $imagem){ ?>
+                            <div class="img">
+                                <img src="<?=URL_BASE.$imagem['caminho_imagem']?>" alt="">
+                                <label for="">
+                                    <input type="checkbox" name="excluir_imagem_principal" id="">
+                                    Excluir imagem
+                                </label>
+                            </div>
+                        <?php } ?>
                     </div>
                     <div class="row">
                         <label for="">
