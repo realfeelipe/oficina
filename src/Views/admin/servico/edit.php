@@ -51,7 +51,7 @@
                             <div class="img">
                                 <img src="<?=URL_BASE.$imagem['caminho_imagem']?>" alt="">
                                 <label for="">
-                                    <input type="checkbox" name="excluir_imagem_principal" id="">
+                                    <input type="checkbox" name="excluir_imagem_galeria[]" id="">
                                     Excluir imagem
                                 </label>
                             </div>
